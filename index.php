@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+require 'koneksi.php';
 $query = "SELECT * FROM ulasan_film ORDER BY id DESC";
 $result = mysqli_query(mysql: $conn, query: $query);
 ?>
@@ -44,8 +44,8 @@ $result = mysqli_query(mysql: $conn, query: $query);
                                 <?php echo ($row['ulasan']); ?>
                             </p>
 
-                            <a href="hapus.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger mt-auto"
-                                onclick="return confirm('This review will be permanently deleted. Continue?')">Delete</a>
+                            <a href="hapus.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger mt-auto" onclick="return confirm('Continue ?')">Delete</a>
+
                         </div>
                     </div>
                 </div>
